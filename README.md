@@ -1,6 +1,6 @@
 # Kubernetes Unapp Demonstration
 
-Assets que utilizo para realizar as demonstrações de Kubernetes utilizando o IBM Cloud Kubernetes Services (IKS).
+Assets que utilizo para realizar as demonstrações de Kubernetes com o IBM Cloud Kubernetes Services (IKS).
 
 1. Abrir o terminal e efetuar o Login na IBM Cloud
 ```
@@ -27,6 +27,11 @@ cd unapp-k8s
 ```
 make getAll
 ```
+3. Para o acesso a lista completa de alias executar o comando abaixo:
+```
+cat Makefile
+```
+
 # Código Fonte do Aplicativo Unapp
 
 1. Entrar no diretório unapp
