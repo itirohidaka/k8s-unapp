@@ -3,9 +3,9 @@ getAll:
 	@echo "\n"
 	kubectl get deployments -l app=unapp
 	@echo "\n"
-	kubectl get pods -l app=unapp
+	kubectl get pods -l app=unapp -o wide
 	@echo "\n"
-	kubectl get services
+	kubectl get services -o wide
 
 getPublicIP:
 	ibmcloud cs workers --cluster=freecluster01
