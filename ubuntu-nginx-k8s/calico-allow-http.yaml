@@ -1,0 +1,16 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: allow-http
+spec:
+  ingress:
+  - action: Allow
+    destination: 
+      ports:
+      - 80
+    protocol: TCP
+    source: {}
+  selector: ibm.role in { 'worker_public', 'master_public' }
+  order: 1100
+  types:
+  - Ingress

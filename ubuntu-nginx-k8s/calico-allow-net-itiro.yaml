@@ -1,0 +1,15 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: allow-itiro
+spec:
+  ingress:
+  - action: Allow
+    destination: {}
+    source:
+      nets:
+      - 10.151.49.192/26
+  order: 1500
+  selector: ibm.role == 'worker_private'
+  types:
+  - Ingress
